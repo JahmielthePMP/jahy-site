@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* House PMP — subtle cinematic polish */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080807;
+}
+
+::selection {
+  background: rgba(177, 135, 70, 0.35);
+  color: #fff8eb;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowDrift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -10px);
+  }
+}
+
+.hero-animate {
+  animation: heroFadeIn 1s ease-out both;
+}
+
+.hero-glow {
+  animation: glowDrift 8s ease-in-out infinite;
+}
+
+.project-card {
+  transition:
+    transform 250ms ease,
+    border-color 250ms ease,
+    background-color 250ms ease;
+}
+
+.project-card {
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    background-color 300ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(177, 135, 70, 0.6);
+  background-color: rgba(189, 148, 85, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Quiet luxury — cinematic hero */
+
+.hero-animate {
+  animation: none;
+}
+
+.hero-glow {
+  filter: drop-shadow(0 0 45px rgba(189, 148, 85, 0.07));
+}
+
+/* Restrained glass detail */
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px solid rgba(189, 148, 85, 0.18);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* More deliberate spacing on large screens */
+@media (min-width: 768px) {
+  .hero-animate {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Scroll reveal animation */
+
+/* Cinematic scroll reveal — stronger easing */
+
+/* Fisheye elastic scroll reveal */
+
+/* Fisheye elastic reveal + exit */
+.reveal {
+  opacity: 0;
+  transform: perspective(900px)
+    translateY(55px)
+    rotateX(8deg)
+    scale(0.88, 0.94);
+  filter: blur(7px);
+  transform-origin: center center;
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-visible {
+  animation: fisheyeIn 1300ms both;
+}
+
+.reveal.is-hidden {
+  animation: fisheyeOut 650ms both;
+  pointer-events: none;
+}
+
+
+@keyframes fisheyeIn {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px)
+      translateY(28px)
+      rotateX(3deg)
+      scale(0.96, 0.98);
+    filter: blur(4px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: perspective(1200px)
+      translateY(-2px)
+      rotateX(-0.5deg)
+      scale(1.008, 0.998);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(1200px)
+      translateY(0)
+      rotateX(0)
+      scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes fisheyeOut {
+  0% {
+    opacity: 1;
+    transform: perspective(1200px)
+      translateY(0)
+      rotateX(0)
+      scale(1);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: perspective(1200px)
+      translateY(-18px)
+      rotateX(-2deg)
+      scale(0.97, 0.95);
+    filter: blur(4px);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+.reveal.is-visible {
+  animation: fisheyeIn 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal.is-hidden {
+  animation: fisheyeOut 500ms ease-in-out both;
+  pointer-events: none;
+}
+  .reveal.is-hidden {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    pointer-events: auto;
+  }
+}
+
+
