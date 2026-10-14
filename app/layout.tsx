@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jahythepmp.vercel.app"),
+  metadataBase: new URL("https://jahy-site.vercel.app"),
   title: {
     default: "JAHY | The Duke of Web3",
     template: "%s | JAHY",
