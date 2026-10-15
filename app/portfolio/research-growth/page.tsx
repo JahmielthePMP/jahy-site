@@ -34,6 +34,66 @@ const projects = [
     "https://app.notion.com/p/ICP-MARKET-TRANSLATION-3c380d9c420080bb9e56d0b1fafe0c1d?source=copy_link",
 },
 
+{
+  number: "04",
+  title: "Verilay Growth Audit",
+  category: "GROWTH STRATEGY",
+  description:
+    "An audit of Verilay's messaging, B2B acquisition, onboarding, and retention, with recommendations to turn its existing product strengths and case studies into stronger growth.",
+  cover: "/covers/verilay-audit.jpg",
+  notionUrl:
+    "https://app.notion.com/p/VERILAY-AUDIT-3df80d9c4200815c90b5c9dc55efa3f3?source=copy_link",
+},
+
+{
+  number: "05",
+  title: "Swivr Growth Audit",
+  category: "GROWTH & COMMUNITY",
+  description:
+    "A growth strategy audit focused on targeted trader acquisition, beta feedback loops, ambassador development, activation, and expansion opportunities for Solana-based prediction markets.",
+  cover: "/covers/swivr-audit.jpg",
+  notionUrl:
+    "https://app.notion.com/p/SWIVR-AUDIT-3de80d9c420081e8b269f105adc9261c?source=copy_link",
+},
+
+
+{
+  number: "06",
+  title: "DeFi.com Audit",
+  category: "GROWTH STRATEGY",
+  description:
+    "A strategic audit exploring DeFi.com's positioning, user acquisition, and growth opportunities, with recommendations for improving market visibility and user activation.",
+  cover: "/covers/defi-com-audit.jpg",
+  notionUrl:
+    "https://app.notion.com/p/DEFI-COM-AUDIT-3dd80d9c42008152a86ec3cbb5566b34?source=copy_link",
+},
+
+
+{
+  number: "07",
+  title: "EfficiencyDMI Community",
+  category: "COMMUNITY GROWTH",
+  description:
+    "A community-building initiative focused on student partnerships, campus activation, and reciprocal value creation to turn university students into an engaged community.",
+  cover: "/covers/efficiencydmi-community.jpg",
+  notionUrl:
+    "https://app.notion.com/p/EfficiencyDMI-Community-3dc80d9c42008055a132f53e27a9585f?source=copy_link",
+},
+
+
+
+{
+  number: "08",
+  title: "Fiber Audit",
+  category: "GROWTH STRATEGY",
+  description:
+    "A strategic audit examining Fiber's positioning, growth opportunities, and potential pathways to stronger user acquisition and ecosystem adoption.",
+  cover: "/covers/fiber-audit.jpg",
+  notionUrl:
+    "https://app.notion.com/p/FIBER-AUDIT-3d880d9c420080b2a82fe34f84cb4f24?source=copy_link",
+},
+
+
 ];
 
 export default function ResearchGrowthPage() {
