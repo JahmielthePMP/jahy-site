@@ -29,7 +29,7 @@ const projects = [
   category: "ECOSYSTEM STRATEGY",
   description:
     "An exploration of ICP's positioning and how its technology and value proposition can be translated into clearer market opportunities.",
-  cover: "/covers/icp-market-translation.jpg",
+ cover: "/covers/icp-market-translation.jpg",
   notionUrl:
     "https://app.notion.com/p/ICP-MARKET-TRANSLATION-3c380d9c420080bb9e56d0b1fafe0c1d?source=copy_link",
 },
